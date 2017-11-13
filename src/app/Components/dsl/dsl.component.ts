@@ -8,9 +8,19 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class DslComponent implements OnInit {
 
+  qosParameters = [
+    'Thoroughput',
+    'Latency',
+    'Jitter'
+  ];
+
+  selectedParam: string;
+
   constructor() { }
 
   ngOnInit() {
   }
+
+
 
 }
