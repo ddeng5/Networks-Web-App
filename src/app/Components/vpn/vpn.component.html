@@ -1,0 +1,13 @@
+<div>
+  <h2>VPN</h2>
+
+  <select [(ngModel)]="selectedParam">
+    <option *ngFor="let qos of qosParameters" >
+      {{qos}}
+    </option>
+  </select>
+
+  <p>You have selected this QoS parameter: {{selectedParam}}</p>
+
+</div>
+
