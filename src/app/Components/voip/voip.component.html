@@ -1,11 +1,13 @@
 <div>
   <h2>VoIP</h2>
 
-  <select [(ngModel)]="selectedParam">
-    <option *ngFor="let qos of qosParameters" >
-      {{qos}}
-    </option>
-  </select>
+  <div class="form-group">
+    <select class="form-control" [(ngModel)]="selectedParam">
+      <option *ngFor="let qos of qosParameters" >
+        {{qos}}
+      </option>
+    </select>
+  </div>
 
   <p>You have selected this QoS parameter: {{selectedParam}}</p>
 
