@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ResearchService } from '../../Services/research.service';
 
 @Component({
   selector: 'app-voip',
@@ -17,7 +18,7 @@ export class VoipComponent implements OnInit {
   selectedParam: string;
 
 
-  constructor() { }
+  constructor(private researchService: ResearchService) { }
 
   ngOnInit() {
   }

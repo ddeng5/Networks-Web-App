@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ResearchService } from '../../Services/research.service';
 
 @Component({
   selector: 'app-vpn',
@@ -15,7 +16,7 @@ export class VpnComponent implements OnInit {
 
   selectedParam: string;
 
-  constructor() { }
+  constructor(private researchService: ResearchService) { }
 
   ngOnInit() {
   }

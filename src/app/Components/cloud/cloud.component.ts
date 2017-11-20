@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ResearchService } from '../../Services/research.service';
 
 @Component({
   selector: 'app-cloud',
@@ -13,11 +14,15 @@ export class CloudComponent implements OnInit {
     'Jitter'
   ];
 
-  selectedParam: string;
+  selectedParam: String;
 
-  constructor() { }
+  constructor(private researchService: ResearchService) { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  sendData(): void {
+    console.log("wow");
+    this.researchService.receiveData(this.selectedParam);
   }
 
 }

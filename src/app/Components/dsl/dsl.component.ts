@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ResearchService } from '../../Services/research.service';
 
 @Component({
   selector: 'app-dsl',
@@ -16,7 +17,11 @@ export class DslComponent implements OnInit {
 
   selectedParam: string;
 
-  constructor() { }
+  constructor(private researchService: ResearchService) {
+    this.researchService.sendData$.subscribe((data) => {
+      this.selectedParam = data;
+    });
+  }
 
   ngOnInit() {
   }

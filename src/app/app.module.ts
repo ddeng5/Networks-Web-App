@@ -8,6 +8,7 @@ import { VoipComponent } from './Components/voip/voip.component';
 import { IptvComponent } from './Components/iptv/iptv.component';
 import { VpnComponent } from './Components/vpn/vpn.component';
 import { CloudComponent } from './Components/cloud/cloud.component';
+import { ResearchService } from './Services/research.service';
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import { CloudComponent } from './Components/cloud/cloud.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ResearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

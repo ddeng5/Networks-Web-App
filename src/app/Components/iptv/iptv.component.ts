@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ResearchService } from '../../Services/research.service';
 
 @Component({
   selector: 'app-iptv',
@@ -16,7 +17,7 @@ export class IptvComponent implements OnInit {
 
   selectedParam: string;
 
-  constructor() { }
+  constructor(private researchService: ResearchService) { }
 
   ngOnInit() {
   }
