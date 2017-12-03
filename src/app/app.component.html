@@ -36,28 +36,28 @@
         <br><br>
 
         <div class="form-group">
-          <label>Input {{selectedParam}} value in {{units}}</label>
-          <input type="number" class="form-control">
+          <label>Input {{selectedParam}} Value ({{units}})</label>
+          <input type="number" class="form-control" [(ngModel)]="inputValue">
         </div>
 
         <br><br><br><br>
 
         <footer>
-          <a href="#" class="button special">Submit</a>
+          <button (click)="submitValue()" class="button special">Submit</button>
         </footer>
 
         <br>
-        
+
       </article>
   </div>
 </section>
 
 <!-- Two -->
-<section id="two" class="wrapper style1 special">
+<section id="two" class="wrapper style1 special" [ngClass]="{ 'on': submit, 'off': !submit  }" >
   <div class="inner">
     <header>
-      <h2>Internet Service Provier Services</h2>
-      <p>Select your ISP service:</p>
+      <h2>Internet Service Provider</h2>
+      <p>Shown below are the average values for the different ISP services. Your input is compared to these values and it's performance is indicated by the color.</p>
     </header>
     <div class="flex flex-4">
       <div class="box person">
@@ -79,7 +79,7 @@
   </div>
 </section>
 
-<!-- Three -->
+<!--
 <section id="three" class="wrapper special">
   <div class="inner">
     <header class="align-center">
@@ -114,7 +114,7 @@
     </div>
   </div>
 </section>
-
+-->
 
 
 <!-- Footer -->
@@ -122,15 +122,8 @@
   <div class="inner">
     <div class="flex">
       <div class="copyright">
-        &copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
+        CS4457 Networks II Project: Daniel Deng, Mathew Wong, Winston Leung
       </div>
-      <ul class="icons">
-        <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-        <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-        <li><a href="#" class="icon fa-linkedin"><span class="label">linkedIn</span></a></li>
-        <li><a href="#" class="icon fa-pinterest-p"><span class="label">Pinterest</span></a></li>
-        <li><a href="#" class="icon fa-vimeo"><span class="label">Vimeo</span></a></li>
-      </ul>
     </div>
   </div>
 </footer>

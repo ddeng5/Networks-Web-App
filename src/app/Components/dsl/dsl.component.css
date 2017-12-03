@@ -1,0 +1,15 @@
+.inputValue {
+  font-size: 2em;
+}
+
+.better {
+  background-color: #4cdb4c;
+}
+
+.average {
+  background-color: #ffff4c;
+}
+
+.worse {
+  background-color: #ff3232;
+}

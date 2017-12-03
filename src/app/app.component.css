@@ -3078,5 +3078,15 @@ button:disabled,
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 4px;
+  -webkit-appearance: menulist;
 
 }
+
+.off {
+  display: none;
+}
+
+.on {
+  display: block;
+}
+
