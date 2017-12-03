@@ -1,17 +1,8 @@
 <div>
-  <h2>DSL</h2>
+  <h2 [ngClass]="{'good' : good, 'average' : average, 'bad' : bad}">DSL</h2>
   <br>
-<!--
-  <div class="form-group">
-    <select class="form-control" [(ngModel)]="selectedParam">
-      <option *ngFor="let qos of qosParameters" >
-        {{qos}}
-      </option>
-    </select>
-  </div>
-  -->
-  <div class="inputValue">
-    {{selectedParam}}
+  <div>
+    {{status}}
   </div>
   <br>
   <p>You have selected this QoS parameter: {{selectedParam}}</p>

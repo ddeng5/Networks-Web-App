@@ -15,17 +15,25 @@ export class DslComponent implements OnInit {
     'Jitter'
   ];
 
-  selectedParam: string;
+  returnedResults;
+  status = '';
+  good = false;
+  average = false;
+  bad= false;
 
   constructor(private researchService: ResearchService) {
     this.researchService.sendData$.subscribe((data) => {
-      this.selectedParam = data;
+      this.displayData(data);
     });
   }
 
   ngOnInit() {
   }
 
+  displayData(returnedResults) {
+    this.returnedResults = returnedResults;
+    this.status = this.returnedResults[6];
 
+  }
 
 }

@@ -15,11 +15,39 @@ export class IptvComponent implements OnInit {
     'Jitter'
   ];
 
-  selectedParam: string;
+  returnedResults;
+  status = '';
+  good = false;
+  average = false;
+  bad= false;
 
-  constructor(private researchService: ResearchService) { }
+  constructor(private researchService: ResearchService) {
+    this.researchService.sendData$.subscribe((data) => {
+      this.displayData(data);
+    });
+  }
 
   ngOnInit() {
+  }
+
+  displayData(returnedResults) {
+    this.returnedResults = returnedResults;
+    this.status = this.returnedResults[3];
+    this.good = false;
+    this.average = false;
+    this.bad = false;
+
+    if (this.status == 'good') {
+      this.good = true;
+    }
+    else if (this.status == 'bad') {
+      this.bad = true;
+    }
+    else if (this.status == 'average') {
+      this.average = true;
+    }
+    console.log(this.status);
+    console.log(this.returnedResults);
   }
 
 }

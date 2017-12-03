@@ -1,12 +1,9 @@
 <div>
   <h2>Cloud</h2>
-
-  <div class="form-group">
-    <select class="form-control" [(ngModel)]="selectedParam" (ngModelChange)="sendData()">
-      <option *ngFor="let qos of qosParameters" >
-        {{qos}}
-      </option>
-    </select>
+  <br>
+  
+  <div>
+    {{status}}
   </div>
 
   <p>You have selected this QoS parameter: {{selectedParam}}</p>

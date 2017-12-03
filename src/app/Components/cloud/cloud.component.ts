@@ -14,15 +14,24 @@ export class CloudComponent implements OnInit {
     'Jitter'
   ];
 
-  selectedParam: String;
+  returnedResults;
+  status = '';
+  good = false;
+  average = false;
+  bad= false;
 
-  constructor(private researchService: ResearchService) { }
-
-  ngOnInit() { }
-
-  sendData(): void {
-    console.log("wow");
-    this.researchService.receiveData(this.selectedParam);
+  constructor(private researchService: ResearchService) {
+    this.researchService.sendData$.subscribe((data) => {
+      this.displayData(data);
+    });
   }
 
+  ngOnInit() {
+  }
+
+  displayData(returnedResults) {
+    this.returnedResults = returnedResults;
+    this.status = this.returnedResults[5];
+
+  }
 }

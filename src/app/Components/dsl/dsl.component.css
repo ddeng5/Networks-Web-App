@@ -2,14 +2,14 @@
   font-size: 2em;
 }
 
-.better {
-  background-color: #4cdb4c;
+.good {
+  background-color: #CCFFCC;
 }
 
 .average {
-  background-color: #ffff4c;
+  background-color: #ffff99;
 }
 
-.worse {
-  background-color: #ff3232;
+.bad {
+  background-color: #ff9999;
 }

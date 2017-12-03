@@ -40,10 +40,16 @@
           <input type="number" class="form-control" [(ngModel)]="inputValue">
         </div>
 
+        <br><br>
+        <div [ngClass]="{ 'form-group' : throughput, 'off' : !throughput}">
+          <label>Input Latency Value (ms) for Calculating Throughput for VPN</label>
+          <input type="number" class="form-control" [(ngModel)]="extra">
+        </div>
+
         <br><br><br><br>
 
         <footer>
-          <button (click)="submitValue()" class="button special">Submit</button>
+          <a href="#two"><button (click)="submitValue()" class="button special">Submit</button></a>
         </footer>
 
         <br>
