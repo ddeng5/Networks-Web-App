@@ -23,7 +23,7 @@ export class AppComponent {
   latencyUnits = 'ms';
   jitterUnits = 'ms';
   errorRateUnits = '%';
-  throughputUnits = 'kbits/s';
+  throughputUnits = 'Kbps';
   bandwidthUnits = 'Kbps';
   units = this.latencyUnits;
   submit = false;

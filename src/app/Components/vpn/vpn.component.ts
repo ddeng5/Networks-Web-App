@@ -45,6 +45,7 @@ export class VpnComponent implements OnInit {
     else if (this.status == 'average') {
       this.average = true;
     }
+
     console.log(this.status);
     console.log(this.returnedResults);
   }

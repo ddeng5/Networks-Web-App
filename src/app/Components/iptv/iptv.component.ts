@@ -20,6 +20,7 @@ export class IptvComponent implements OnInit {
   good = false;
   average = false;
   bad= false;
+  message;
 
   constructor(private researchService: ResearchService) {
     this.researchService.sendData$.subscribe((data) => {
@@ -36,6 +37,7 @@ export class IptvComponent implements OnInit {
     this.good = false;
     this.average = false;
     this.bad = false;
+    this.message = this.returnedResults[8];
 
     if (this.status == 'good') {
       this.good = true;
