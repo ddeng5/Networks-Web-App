@@ -20,6 +20,7 @@ export class DslComponent implements OnInit {
   good = false;
   average = false;
   bad= false;
+  message;
 
   constructor(private researchService: ResearchService) {
     this.researchService.sendData$.subscribe((data) => {
@@ -33,6 +34,22 @@ export class DslComponent implements OnInit {
   displayData(returnedResults) {
     this.returnedResults = returnedResults;
     this.status = this.returnedResults[6];
+
+    if (this.status == 'good') {
+      this.good = true;
+      this.message = 'Compared to the performance of cable Internet service, DSL speed has historically been slower. However, the speed of DSL Internet is increasing as the technology improves and service providers upgrade their network infrastructure. The exact DSL speed you will enjoy varies depending on several factors.';
+    }
+    else if (this.status == 'bad') {
+      this.bad = true;
+      this.message = 'Compared to the performance of cable Internet service, DSL speed has historically been slower. However, the speed of DSL Internet is increasing as the technology improves and service providers upgrade their network infrastructure. The exact DSL speed you will enjoy varies depending on several factors.';
+    }
+    else if (this.status == 'average') {
+      this.average = true;
+      this.message = 'Compared to the performance of cable Internet service, DSL speed has historically been slower. However, the speed of DSL Internet is increasing as the technology improves and service providers upgrade their network infrastructure. The exact DSL speed you will enjoy varies depending on several factors.';
+    }
+    else {
+      this.message = 'Sorry, this data is currently unavailable';
+    }
 
   }
 

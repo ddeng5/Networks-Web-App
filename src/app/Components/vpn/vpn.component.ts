@@ -19,6 +19,7 @@ export class VpnComponent implements OnInit {
   good = false;
   average = false;
   bad= false;
+  message;
 
   constructor(private researchService: ResearchService) {
     this.researchService.sendData$.subscribe((data) => {
@@ -44,6 +45,9 @@ export class VpnComponent implements OnInit {
     }
     else if (this.status == 'average') {
       this.average = true;
+    }
+    else {
+      this.message = 'Sorry, this data is currently unavailable';
     }
 
     console.log(this.status);
