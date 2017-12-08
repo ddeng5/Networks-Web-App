@@ -39,12 +39,15 @@ export class VpnComponent implements OnInit {
 
     if (this.status == 'good') {
       this.good = true;
+      this.message = 'Sorry, VPN explanations are still a work in progress.';
     }
     else if (this.status == 'bad') {
       this.bad = true;
+      this.message = 'Sorry, VPN explanations are still a work in progress.';
     }
     else if (this.status == 'average') {
       this.average = true;
+      this.message = 'Sorry, VPN explanations are still a work in progress.';
     }
     else {
       this.message = 'Sorry, this data is currently unavailable';
